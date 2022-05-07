@@ -17,7 +17,7 @@ class Realtor(Employee):
 
 class Department(models.Model):
     dep_name = models.CharField(max_length=150)
-    head_of_dep = models.OneToOneField('Employee', on_delete=models.SET_NULL, null=True)
+    head_of_dep = models.OneToOneField('Employee', on_delete=models.SET_NULL, null=True, blank=True)
     number_of_employees = models.IntegerField
 
 
